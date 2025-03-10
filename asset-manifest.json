@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sigmaclicker/static/css/main.b6f0737a.css",
+    "main.css": "/sigmaclicker/static/css/main.dd300282.css",
     "main.js": "/sigmaclicker/static/js/main.e3a4bc4c.js",
     "static/js/453.13ecea43.chunk.js": "/sigmaclicker/static/js/453.13ecea43.chunk.js",
     "static/media/energy-icon.png": "/sigmaclicker/static/media/energy-icon.4f29c6b741094ee26986.png",
     "index.html": "/sigmaclicker/index.html",
-    "main.b6f0737a.css.map": "/sigmaclicker/static/css/main.b6f0737a.css.map",
+    "main.dd300282.css.map": "/sigmaclicker/static/css/main.dd300282.css.map",
     "main.e3a4bc4c.js.map": "/sigmaclicker/static/js/main.e3a4bc4c.js.map",
     "453.13ecea43.chunk.js.map": "/sigmaclicker/static/js/453.13ecea43.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6f0737a.css",
+    "static/css/main.dd300282.css",
     "static/js/main.e3a4bc4c.js"
   ]
 }
