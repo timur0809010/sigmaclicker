@@ -12,6 +12,7 @@ function App() {
   const [maxEnergy, setMaxEnergy] = useState(100); // Максимум энергии
   const [energyRegen, setEnergyRegen] = useState(5); // Сколько энергии восстанавливается каждую секунду
   const [isClickBlocked, setIsClickBlocked] = useState(false); // Заблокирован ли клик
+  const [activeTab, setActiveTab] = useState('clicking'); // Текущая активная вкладка: 'clicking' или 'upgrades'
 
   // Таймер для восстановления энергии
   useEffect(() => {
@@ -73,9 +74,6 @@ function App() {
   return (
     <div className="App">
       <h1>Кликай сигму - получай TON</h1>
-      <div className="score-board">
-        <p>Сигма-коинов: <span>{score}</span></p>
-      </div>
 
       {/* Энергия */}
       <div className="energy-board">
@@ -83,32 +81,60 @@ function App() {
         <p>Энергия: <span>{energy}</span>/{maxEnergy}</p>
       </div>
 
-      <div className="image-container">
-        <img
-          src={clickImage} // Путь к картинке
-          alt="Кликни меня!"
-          className="clickable-image"
-          onClick={handleImageClick}
-        />
+      {/* Переключение вкладок */}
+      <div className="tab-buttons">
+        <button
+          className={activeTab === 'clicking' ? 'active-tab' : ''}
+          onClick={() => setActiveTab('clicking')}
+        >
+          Кликай
+        </button>
+        <button
+          className={activeTab === 'upgrades' ? 'active-tab' : ''}
+          onClick={() => setActiveTab('upgrades')}
+        >
+          Прокачки
+        </button>
       </div>
 
-      {/* Кнопки прокачки */}
-      <div className="upgrade-container">
-        <button onClick={handleUpgrade}>
-          Прокачать (Стоимость: {upgradeCost} монет) - Сейчас: {clickValue} монет за клик
-        </button>
-        <p>Уровень прокачки: {level}</p>
-      </div>
+      {/* Вкладка с кликами */}
+      {activeTab === 'clicking' && (
+        <div className="clicking-tab">
+          <div className="score-board">
+            <p>Сигма-коинов: <span>{score}</span></p>
+          </div>
 
-      {/* Прокачка энергии */}
-      <div className="energy-upgrades">
-        <button onClick={handleEnergyUpgrade}>
-          Прокачать ёмкость энергии (50 монет)
-        </button>
-        <button onClick={handleEnergyRegenUpgrade}>
-          Прокачать восстановление энергии (100 монет)
-        </button>
-      </div>
+          <div className="image-container">
+            <img
+              src={clickImage} // Путь к картинке
+              alt="Кликни меня!"
+              className="clickable-image"
+              onClick={handleImageClick}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Вкладка с прокачками */}
+      {activeTab === 'upgrades' && (
+        <div className="upgrades-tab">
+          <div className="upgrade-container">
+            <button onClick={handleUpgrade}>
+              Прокачать (Стоимость: {upgradeCost} монет) - Сейчас: {clickValue} монет за клик
+            </button>
+            <p>Уровень прокачки: {level}</p>
+          </div>
+
+          <div className="energy-upgrades">
+            <button onClick={handleEnergyUpgrade}>
+              Прокачать ёмкость энергии (50 монет)
+            </button>
+            <button onClick={handleEnergyRegenUpgrade}>
+              Прокачать восстановление энергии (100 монет)
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

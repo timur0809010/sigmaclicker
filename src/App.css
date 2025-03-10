@@ -1,82 +1,113 @@
-/* Сброс стилей */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Общие стили */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9; /* Светлый фон */
+  color: #333; /* Темный текст */
+  padding-bottom: 80px; /* Отступ снизу для кнопок */
 }
 
-/* Стиль для всей страницы */
-.App {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333; /* Темный цвет для заголовка */
+}
+
+/* Кнопки вкладок */
+.tab-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
-
-/* Стиль для счёта */
-.score-board {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Стиль для энергии */
-.energy-board {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-/* Стиль для изображения */
-.image-container {
   margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+  z-index: 10; /* Кнопки будут всегда поверх */
 }
 
-.clickable-image {
-  max-width: 300px;
+.tab-buttons button {
+  padding: 12px 24px;
+  font-size: 1em;
   cursor: pointer;
-  border-radius: 10px;
-  transition: transform 0.2s ease;
-}
-
-.clickable-image:hover {
-  transform: scale(1.05);
-}
-
-/* Стиль для кнопки прокачки */
-.upgrade-container {
-  margin-top: 20px;
-  text-align: center;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+  border: none;
+  border-radius: 8px;
   background-color: #4CAF50;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: 2px solid #000;
+  margin: 0 10px;
 }
 
-button:hover {
+.tab-buttons button:hover {
   background-color: #45a049;
 }
 
-/* Стиль для энергии */
+.active-tab {
+  background-color: #3e8e41; /* Цвет активной кнопки */
+}
+
+/* Стили для вкладок */
+.clicking-tab, .upgrades-tab {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 80px; /* Чтобы кнопки не перекрывали контент */
+}
+
+/* Скрытие вкладок */
+.upgrades-tab {
+  display: none; /* Изначально скрыта */
+}
+
 .energy-board {
-  font-size: 20px;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.2em;
 }
 
 .energy-icon {
-  width: 40px;  /* Отображаем в размере 40x40 пикселей */
+  width: 40px;
   height: 40px;
-  object-fit: cover;  /* Убедимся, что картинка будет правильно обрезана и пропорциональна */
   margin-right: 10px;
+}
+
+/* Стили для картинки сигмы */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.clickable-image {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.clickable-image:hover {
+  transform: scale(1.1);
+}
+
+/* Стили для прокачки */
+.upgrade-container, .energy-upgrades {
+  margin: 20px 0;
+}
+
+.upgrade-button, .energy-upgrade-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.upgrade-button:hover, .energy-upgrade-button:hover {
+  background-color: #45a049; /* Цвет кнопки при наведении */
 }
