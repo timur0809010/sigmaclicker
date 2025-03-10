@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.05bc22f1.css",
+    "main.js": "/static/js/main.1a21acf0.js",
+    "static/js/453.13ecea43.chunk.js": "/static/js/453.13ecea43.chunk.js",
+    "static/media/energy-icon.png": "/static/media/energy-icon.4f29c6b741094ee26986.png",
+    "index.html": "/index.html",
+    "main.05bc22f1.css.map": "/static/css/main.05bc22f1.css.map",
+    "main.1a21acf0.js.map": "/static/js/main.1a21acf0.js.map",
+    "453.13ecea43.chunk.js.map": "/static/js/453.13ecea43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05bc22f1.css",
+    "static/js/main.1a21acf0.js"
+  ]
+}
