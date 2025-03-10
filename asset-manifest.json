@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sigmaclicker/static/css/main.beba6f98.css",
-    "main.js": "/sigmaclicker/static/js/main.7cda7119.js",
+    "main.css": "/sigmaclicker/static/css/main.5cc5f509.css",
+    "main.js": "/sigmaclicker/static/js/main.c07a45c5.js",
     "static/js/453.13ecea43.chunk.js": "/sigmaclicker/static/js/453.13ecea43.chunk.js",
     "static/media/energy-icon.png": "/sigmaclicker/static/media/energy-icon.4f29c6b741094ee26986.png",
     "index.html": "/sigmaclicker/index.html",
-    "main.beba6f98.css.map": "/sigmaclicker/static/css/main.beba6f98.css.map",
-    "main.7cda7119.js.map": "/sigmaclicker/static/js/main.7cda7119.js.map",
+    "main.5cc5f509.css.map": "/sigmaclicker/static/css/main.5cc5f509.css.map",
+    "main.c07a45c5.js.map": "/sigmaclicker/static/js/main.c07a45c5.js.map",
     "453.13ecea43.chunk.js.map": "/sigmaclicker/static/js/453.13ecea43.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.beba6f98.css",
-    "static/js/main.7cda7119.js"
+    "static/css/main.5cc5f509.css",
+    "static/js/main.c07a45c5.js"
   ]
 }
