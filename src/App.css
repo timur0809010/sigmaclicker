@@ -1,0 +1,82 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стиль для всей страницы */
+.App {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Стиль для счёта */
+.score-board {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Стиль для энергии */
+.energy-board {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Стиль для изображения */
+.image-container {
+  margin-top: 20px;
+}
+
+.clickable-image {
+  max-width: 300px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+/* Стиль для кнопки прокачки */
+.upgrade-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #000;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Стиль для энергии */
+.energy-board {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.energy-icon {
+  width: 40px;  /* Отображаем в размере 40x40 пикселей */
+  height: 40px;
+  object-fit: cover;  /* Убедимся, что картинка будет правильно обрезана и пропорциональна */
+  margin-right: 10px;
+}
