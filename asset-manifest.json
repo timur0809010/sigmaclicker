@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/sigmaclicker/static/css/main.1a4e7860.chunk.css",
-    "main.js": "/sigmaclicker/static/js/main.8c5a230c.chunk.js",
-    "main.js.map": "/sigmaclicker/static/js/main.8c5a230c.chunk.js.map",
+    "main.css": "/sigmaclicker/static/css/main.2a377556.chunk.css",
+    "main.js": "/sigmaclicker/static/js/main.35f68ce2.chunk.js",
+    "main.js.map": "/sigmaclicker/static/js/main.35f68ce2.chunk.js.map",
     "runtime-main.js": "/sigmaclicker/static/js/runtime-main.e5841310.js",
     "runtime-main.js.map": "/sigmaclicker/static/js/runtime-main.e5841310.js.map",
     "static/js/2.75d2372c.chunk.js": "/sigmaclicker/static/js/2.75d2372c.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.f6ffe852.chunk.js": "/sigmaclicker/static/js/3.f6ffe852.chunk.js",
     "static/js/3.f6ffe852.chunk.js.map": "/sigmaclicker/static/js/3.f6ffe852.chunk.js.map",
     "index.html": "/sigmaclicker/index.html",
-    "static/css/main.1a4e7860.chunk.css.map": "/sigmaclicker/static/css/main.1a4e7860.chunk.css.map",
+    "static/css/main.2a377556.chunk.css.map": "/sigmaclicker/static/css/main.2a377556.chunk.css.map",
     "static/js/2.75d2372c.chunk.js.LICENSE.txt": "/sigmaclicker/static/js/2.75d2372c.chunk.js.LICENSE.txt",
     "static/media/energy-icon.4f29c6b7.png": "/sigmaclicker/static/media/energy-icon.4f29c6b7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e5841310.js",
     "static/js/2.75d2372c.chunk.js",
-    "static/css/main.1a4e7860.chunk.css",
-    "static/js/main.8c5a230c.chunk.js"
+    "static/css/main.2a377556.chunk.css",
+    "static/js/main.35f68ce2.chunk.js"
   ]
 }
