@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sigmaclicker/static/css/main.1a4e7860.chunk.css",
-    "main.js": "/sigmaclicker/static/js/main.ff545f68.chunk.js",
-    "main.js.map": "/sigmaclicker/static/js/main.ff545f68.chunk.js.map",
+    "main.js": "/sigmaclicker/static/js/main.8c5a230c.chunk.js",
+    "main.js.map": "/sigmaclicker/static/js/main.8c5a230c.chunk.js.map",
     "runtime-main.js": "/sigmaclicker/static/js/runtime-main.e5841310.js",
     "runtime-main.js.map": "/sigmaclicker/static/js/runtime-main.e5841310.js.map",
     "static/js/2.75d2372c.chunk.js": "/sigmaclicker/static/js/2.75d2372c.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e5841310.js",
     "static/js/2.75d2372c.chunk.js",
     "static/css/main.1a4e7860.chunk.css",
-    "static/js/main.ff545f68.chunk.js"
+    "static/js/main.8c5a230c.chunk.js"
   ]
 }
