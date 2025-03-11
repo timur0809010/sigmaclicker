@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/sigmaclicker/static/css/main.8e7094ba.css",
-    "main.js": "/sigmaclicker/static/js/main.06cd0ffd.js",
-    "static/js/453.13ecea43.chunk.js": "/sigmaclicker/static/js/453.13ecea43.chunk.js",
-    "static/media/energy-icon.png": "/sigmaclicker/static/media/energy-icon.4f29c6b741094ee26986.png",
+    "main.css": "/sigmaclicker/static/css/main.2a377556.chunk.css",
+    "main.js": "/sigmaclicker/static/js/main.7388860c.chunk.js",
+    "main.js.map": "/sigmaclicker/static/js/main.7388860c.chunk.js.map",
+    "runtime-main.js": "/sigmaclicker/static/js/runtime-main.e5841310.js",
+    "runtime-main.js.map": "/sigmaclicker/static/js/runtime-main.e5841310.js.map",
+    "static/js/2.75d2372c.chunk.js": "/sigmaclicker/static/js/2.75d2372c.chunk.js",
+    "static/js/2.75d2372c.chunk.js.map": "/sigmaclicker/static/js/2.75d2372c.chunk.js.map",
+    "static/js/3.f6ffe852.chunk.js": "/sigmaclicker/static/js/3.f6ffe852.chunk.js",
+    "static/js/3.f6ffe852.chunk.js.map": "/sigmaclicker/static/js/3.f6ffe852.chunk.js.map",
     "index.html": "/sigmaclicker/index.html",
-    "main.8e7094ba.css.map": "/sigmaclicker/static/css/main.8e7094ba.css.map",
-    "main.06cd0ffd.js.map": "/sigmaclicker/static/js/main.06cd0ffd.js.map",
-    "453.13ecea43.chunk.js.map": "/sigmaclicker/static/js/453.13ecea43.chunk.js.map"
+    "static/css/main.2a377556.chunk.css.map": "/sigmaclicker/static/css/main.2a377556.chunk.css.map",
+    "static/js/2.75d2372c.chunk.js.LICENSE.txt": "/sigmaclicker/static/js/2.75d2372c.chunk.js.LICENSE.txt",
+    "static/media/energy-icon.4f29c6b7.png": "/sigmaclicker/static/media/energy-icon.4f29c6b7.png"
   },
   "entrypoints": [
-    "static/css/main.8e7094ba.css",
-    "static/js/main.06cd0ffd.js"
+    "static/js/runtime-main.e5841310.js",
+    "static/js/2.75d2372c.chunk.js",
+    "static/css/main.2a377556.chunk.css",
+    "static/js/main.7388860c.chunk.js"
   ]
 }
