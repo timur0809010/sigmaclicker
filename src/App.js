@@ -5,14 +5,15 @@ import energyIcon from './assets/energy-icon.png';  // Картинка для �
 
 function App() {
   const [score, setScore] = useState(0); // Состояние для счёта
-  const [clickValue, setClickValue] = useState(1); // Сколько монет даёт один клик
+  const [clickValue, setClickValue] = useState(5); // Сколько монет даёт один клик
   const [upgradeCost, setUpgradeCost] = useState(10); // Стоимость улучшения
   const [level, setLevel] = useState(1); // Уровень прокачки
   const [energy, setEnergy] = useState(100); // Энергия
   const [maxEnergy, setMaxEnergy] = useState(100); // Максимум энергии
   const [energyRegen, setEnergyRegen] = useState(5); // Сколько энергии восстанавливается каждую секунду
   const [isClickBlocked, setIsClickBlocked] = useState(false); // Заблокирован ли клик
-  const [activeTab, setActiveTab] = useState('clicking'); // Текущая активная вкладка: 'clicking' или 'upgrades'
+  const [clickPosition, setClickPosition] = useState(null); // Позиция клика для отображения надписи
+  const [isCoinPopupVisible, setIsCoinPopupVisible] = useState(false); // Отображение попапа с монетами
 
   // Таймер для восстановления энергии
   useEffect(() => {
@@ -26,13 +27,21 @@ function App() {
   }, [energy, energyRegen, maxEnergy]);
 
   // Обработчик клика по изображению
-  const handleImageClick = () => {
+  const handleImageClick = (e) => {
     if (energy > 0 && !isClickBlocked) {
       setScore(score + clickValue);
-      setEnergy(energy - 1); // Тратить 1 очко энергии за клик
+      setEnergy(energy - clickValue); // Тратить энергию в зависимости от количества монет
+
+      const x = e.clientX;
+      const y = e.clientY;
+      setClickPosition({ x, y });
+
+      // Показываем надпись с количеством монет
+      setIsCoinPopupVisible(true);
+      setTimeout(() => setIsCoinPopupVisible(false), 200); // Скрываем через 0.2 секунды
 
       // Если энергия заканчивается, блокируем возможность кликов
-      if (energy - 1 === 0) {
+      if (energy - clickValue <= 0) {
         setIsClickBlocked(true);
         setTimeout(() => setIsClickBlocked(false), 3000); // Блокируем клики на 3 секунды
       }
@@ -74,6 +83,9 @@ function App() {
   return (
     <div className="App">
       <h1>Кликай сигму - получай TON</h1>
+      <div className="score-board">
+        <p>Сигма-коинов: <span>{score}</span></p>
+      </div>
 
       {/* Энергия */}
       <div className="energy-board">
@@ -81,43 +93,46 @@ function App() {
         <p>Энергия: <span>{energy}</span>/{maxEnergy}</p>
       </div>
 
-      {/* Переключение вкладок */}
-      <div className="tab-buttons">
-        <button
-          className={activeTab === 'clicking' ? 'active-tab' : ''}
-          onClick={() => setActiveTab('clicking')}
-        >
-          Кликай
-        </button>
-        <button
-          className={activeTab === 'upgrades' ? 'active-tab' : ''}
-          onClick={() => setActiveTab('upgrades')}
-        >
-          Прокачки
-        </button>
+      {/* Вкладки для выбора действий */}
+      <div className="tabs">
+        <button className="tab-button" onClick={() => setActiveTab('click')}>Кликать</button>
+        <button className="tab-button" onClick={() => setActiveTab('upgrade')}>Прокачки</button>
       </div>
 
-      {/* Вкладка с кликами */}
-      {activeTab === 'clicking' && (
-        <div className="clicking-tab">
-          <div className="score-board">
-            <p>Сигма-коинов: <span>{score}</span></p>
-          </div>
-
-          <div className="image-container">
+      {/* Контент вкладки с кликами */}
+      {activeTab === 'click' && (
+        <div className="click-tab">
+          <div className="image-container" onClick={handleImageClick}>
             <img
-              src={clickImage} // Путь к картинке
+              src={clickImage}
               alt="Кликни меня!"
               className="clickable-image"
-              onClick={handleImageClick}
             />
+            {isCoinPopupVisible && clickPosition && (
+              <div
+                className="coin-popup"
+                style={{
+                  left: clickPosition.x - 30,
+                  top: clickPosition.y - 50,
+                  position: 'absolute',
+                  color: 'white',
+                  fontSize: '20px',
+                  fontWeight: 'bold',
+                  pointerEvents: 'none',
+                  opacity: isCoinPopupVisible ? 1 : 0,
+                  transition: 'opacity 0.2s',
+                }}
+              >
+                +{clickValue}
+              </div>
+            )}
           </div>
         </div>
       )}
 
-      {/* Вкладка с прокачками */}
-      {activeTab === 'upgrades' && (
-        <div className="upgrades-tab">
+      {/* Контент вкладки с прокачками */}
+      {activeTab === 'upgrade' && (
+        <div className="upgrade-tab">
           <div className="upgrade-container">
             <button onClick={handleUpgrade}>
               Прокачать (Стоимость: {upgradeCost} монет) - Сейчас: {clickValue} монет за клик
@@ -125,6 +140,7 @@ function App() {
             <p>Уровень прокачки: {level}</p>
           </div>
 
+          {/* Прокачка энергии */}
           <div className="energy-upgrades">
             <button onClick={handleEnergyUpgrade}>
               Прокачать ёмкость энергии (50 монет)
@@ -140,3 +156,4 @@ function App() {
 }
 
 export default App;
+  

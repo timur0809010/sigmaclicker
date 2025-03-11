@@ -1,71 +1,51 @@
-/* Общие стили */
 .App {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f9; /* Светлый фон */
-  color: #333; /* Темный текст */
-  padding-bottom: 80px; /* Отступ снизу для кнопок */
+  justify-content: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
 }
 
-h1 {
-  text-align: center;
-  margin: 20px 0;
-  color: #333; /* Темный цвет для заголовка */
-}
-
-/* Кнопки вкладок */
-.tab-buttons {
+.tabs {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
-  border-top: 2px solid #ddd;
-  z-index: 10; /* Кнопки будут всегда поверх */
+  margin-bottom: 20px;
 }
 
-.tab-buttons button {
-  padding: 12px 24px;
-  font-size: 1em;
-  cursor: pointer;
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 10px;
   border: none;
-  border-radius: 8px;
   background-color: #4CAF50;
   color: white;
-  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.tab-buttons button:hover {
+.tabs button.active {
   background-color: #45a049;
 }
 
-.active-tab {
-  background-color: #3e8e41; /* Цвет активной кнопки */
+.tabs button:hover {
+  background-color: #3e8e41;
 }
 
-/* Стили для вкладок */
-.clicking-tab, .upgrades-tab {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  width: 100%;
-  padding-bottom: 80px; /* Чтобы кнопки не перекрывали контент */
-}
-
-/* Скрытие вкладок */
-.upgrades-tab {
-  display: none; /* Изначально скрыта */
+.click-tab, .upgrade-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .energy-board {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  font-size: 1.2em;
+  margin-top: 10px;
 }
 
 .energy-icon {
@@ -74,40 +54,71 @@ h1 {
   margin-right: 10px;
 }
 
-/* Стили для картинки сигмы */
+.score-board {
+  margin-top: 20px;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  position: relative; /* Для позиционирования надписи */
+  margin-top: 20px;
 }
 
-.clickable-image {
+.image-container img {
   width: 200px;
   height: auto;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
 }
 
-.clickable-image:hover {
-  transform: scale(1.1);
+.coin-popup {
+  transition: opacity 0.2s;
+  opacity: 1;
 }
 
-/* Стили для прокачки */
 .upgrade-container, .energy-upgrades {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-.upgrade-button, .energy-upgrade-button {
+button {
+  padding: 10px 20px;
+  margin: 10px;
   background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  margin: 10px 0;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.upgrade-button:hover, .energy-upgrade-button:hover {
-  background-color: #45a049; /* Цвет кнопки при наведении */
+button:hover {
+  background-color: #45a049;
+}
+
+.upgrade-container p {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .tabs button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .image-container img {
+    width: 150px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .energy-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
